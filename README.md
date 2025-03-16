@@ -1,1 +1,3 @@
-# jonhmchan.github.io
+# jonhmchan.com
+
+This is my personal website
