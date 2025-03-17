@@ -26,6 +26,21 @@
             }
         }
 
+        @keyframes fadeInDelayed {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            80% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .animate-fade-in-up {
             animation: fadeInUp 1s ease-out forwards;
         }
@@ -33,6 +48,11 @@
         .animate-bounce-slow {
             opacity: 0;
             animation: fadeInUp 1s ease-out 1s forwards, bounce 2s ease-in-out infinite 2s;
+        }
+
+        .animate-fade-in-delayed {
+            opacity: 0;
+            animation: fadeInDelayed 1.5s ease-out forwards;
         }
 
         @font-face {
@@ -126,36 +146,43 @@
         <!-- Hero Section -->
         <div class="min-h-screen flex flex-col items-center justify-center relative bg-white dark:bg-neutral-900">
             <h1 class="text-8xl font-light font-gt-super uppercase tracking-wider animate-fade-in-up opacity-0 text-neutral-900 dark:text-neutral-50">Jon H.M. Chan</h1>
-            <div class="absolute bottom-8 animate-bounce-slow">
-                <div class="flex flex-col items-center text-neutral-400 dark:text-neutral-500">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
-                    <span class="mt-2 text-sm font-gt-super">Scroll for more</span>
-                </div>
-            </div>
         </div>
 
         <!-- Content Section -->
-        <div class="max-w-3xl mx-auto px-4 py-16">
-            <h2 class="text-3xl text-neutral-700 dark:text-neutral-200 mb-8 leading-relaxed font-gt-super font-light">
-                I am an artist and founder merging AI with cultural and emotional intelligence to deepen human connection
-            </h2>
+        <div class="max-w-3xl mx-auto px-4 py-16 animate-fade-in-delayed -mt-80">
+            <!-- Introduction Section -->
+            <section class="mb-24">
+                <h2 class="text-4xl text-neutral-700 dark:text-neutral-200 mb-12 leading-tight font-gt-super font-light">
+                    I am an artist &amp; founder merging A.I. with cultural and emotional intelligence to deepen human connection
+                </h2>
+            </section>
 
-            <div class="prose prose-lg text-neutral-600 dark:text-neutral-300 mb-12 font-gt-super font-light">
-                <p>
-                    My belief is that we are put on this earth for meaningful connection. Money, power, and fame mean nothing if you're alone and living outside of your values. I believe we are in a moment in history where AI has unlocked the nuance, richness, and emotional depth of the human experience.
-                </p>
-                <p>
-                    I've seen how this new capability can be harnessed to master ourselves and in turn, better relate to others and the world around us. We are breaking dawn on a new age of intelligence, and I believe that -- with a careful hand -- we can usher in a world where we walk alongside AI in learning about the shape of our souls.
-                </p>
-                <p>
-                    Come join me on this journey.
-                </p>
-            </div>
+            <!-- Previous Experience Section -->
+            <section class="mb-24">
+                <p class="text-2xl text-neutral-600 dark:text-neutral-300 mb-12 font-gt-super font-light">Previously, I was at Stack Overflow leading consumer engineering for its flagship Q&amp;A product with 100M monthly active users. I joined as an early engineer and left after a decade once it was acquired for $1.8B.</p>
+            </section>
+
+            <!-- Beliefs Section -->
+            <section class="mb-24">
+                <div class="prose text-lg text-neutral-600 dark:text-neutral-300 font-gt-super font-light">
+                    <p class="mb-6">
+                        My belief is that we are put on this earth for meaningful connection. Money, power, and fame mean nothing if you're alone and living outside of your values.
+                    </p>
+                    <p class="mb-6">
+                        I believe we are in a moment in history where A.I. has unlocked the nuance, richness, and emotional depth of the human experience.
+                        I've seen firsthand how this new capability can be harnessed to master ourselves, and in turn, better relate to others and the world around us.
+                    </p>
+                    <p class="mb-6">
+                        We are breaking dawn on the age of intelligence, and I believe that&mdash;with a careful hand&mdash;we can usher in a new world where we walk alongside A.I. in learning about the shape of our souls.
+                    </p>
+                    <p class="mb-6">
+                        Come join me on this journey.
+                    </p>
+                </div>
+            </section>
 
             <div class="mb-12 flex justify-center">
-                <a href="https://jonhmchan.substack.com/subscribe" target="_blank" class="w-full bg-neutral-800 dark:bg-neutral-700 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 dark:hover:bg-neutral-600 transition-colors font-gt-super text-center">
+                <a href="https://jonhmchan.substack.com/subscribe" target="_blank" class="w-full text-xl bg-neutral-900 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-900 p-6 rounded-lg hover:bg-opacity-90 dark:hover:bg-opacity-90 transition-colors font-gt-super font-light text-center">
                     Subscribe to my Substack
                 </a>
             </div>
